@@ -1,0 +1,90 @@
+<header class="reddit-header">
+
+  <!-- Left -->
+  <div class="left-section">
+    <img src="https://www.redditstatic.com/desktop2x/img/favicon/apple-icon-57x57.png"
+         class="logo">
+
+    <span class="logo-text">reddit</span>
+  </div>
+
+  <!-- Search -->
+  <div class="search-section">
+    <input
+      type="text"
+      placeholder="Search Reddit">
+  </div>
+
+  <!-- Right -->
+  <div class="right-section">
+
+    <ng-container *ngIf="!isLoggedIn">
+
+      <button routerLink="/login" class="login-btn">
+        Log In
+      </button>
+
+      <button routerLink="/sign-up" class="signup-btn">
+        Sign Up
+      </button>
+
+    </ng-container>
+
+    <ng-container *ngIf="isLoggedIn">
+
+      <button class="icon-btn">
+        ➕
+      </button>
+
+      <button class="icon-btn">
+        🔔
+      </button>
+
+      <!-- Three Dot -->
+      <div class="menu-container">
+
+        <button
+          class="icon-btn"
+          (click)="toggleMenu()">
+          ⋮
+        </button>
+
+        <div
+          class="dropdown"
+          *ngIf="showMenu">
+
+          <div
+            class="dropdown-item"
+            (click)="goToUserProfile()">
+
+            Profile
+
+          </div>
+
+          <div
+            class="dropdown-item"
+            (click)="logout()">
+
+            Logout
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- User -->
+      <div class="user-info">
+
+        <img
+          src="https://www.redditstatic.com/avatars/avatar_default_08_D4E815.png">
+
+        <span>{{username}}</span>
+
+      </div>
+
+    </ng-container>
+
+  </div>
+
+</header>

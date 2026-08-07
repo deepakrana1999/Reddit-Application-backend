@@ -1,0 +1,172 @@
+/* ===========================
+   Reddit Login Page Style
+=========================== */
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #dae0e6;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Background */
+.login-section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #dae0e6;
+    padding: 30px;
+}
+
+/* Card */
+.card {
+    width: 100%;
+    max-width: 600px;
+    border: none;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 10px 25px rgba(0,0,0,.15);
+    overflow: hidden;
+}
+
+/* Header */
+.card-header {
+    background: #FF4500;
+    color: white;
+    padding: 18px;
+    border: none;
+}
+
+.card-header h4 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+/* Body */
+.card-body {
+    padding: 35px;
+}
+
+/* Labels */
+label {
+    font-weight: 600;
+    color: #1c1c1c;
+}
+
+/* Inputs */
+.form-control {
+    height: 45px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background: #f6f7f8;
+    transition: .3s;
+}
+
+.form-control:focus {
+    border-color: #FF4500;
+    background: #fff;
+    box-shadow: 0 0 5px rgba(255,69,0,.4);
+}
+
+/* Validation Messages */
+.form-group span {
+    display: block;
+    margin-top: 5px;
+    color: #d93025;
+    font-size: 13px;
+}
+
+/* Login Button */
+.login {
+    width: 180px;
+    height: 45px;
+    border: none;
+    border-radius: 25px;
+    background: #FF4500;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.login:hover {
+    background: #e03d00;
+}
+
+/* Bottom Section */
+.offset-md-4 {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Links */
+a {
+    color: #0079d3;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Error Message */
+.login-failed {
+    margin-top: 20px;
+    background: #ffe6e6;
+    border-left: 4px solid #dc3545;
+    color: #dc3545;
+    padding: 12px;
+    border-radius: 5px;
+}
+
+.login-failed-text {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Success Message */
+.register-success {
+    margin-top: 20px;
+    background: #d4edda;
+    border-left: 4px solid #28a745;
+    color: #155724;
+    padding: 12px;
+    border-radius: 5px;
+}
+
+.register-success-text {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width:768px){
+
+    .card{
+        width:95%;
+    }
+
+    .card-body{
+        padding:20px;
+    }
+
+    .offset-md-4{
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .login{
+        width:100%;
+    }
+
+    .text-md-right{
+        text-align:left !important;
+        margin-bottom:8px;
+    }
+}
