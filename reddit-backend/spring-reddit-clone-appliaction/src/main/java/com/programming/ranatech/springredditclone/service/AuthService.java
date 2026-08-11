@@ -36,6 +36,7 @@ public class AuthService {
 	private final PasswordEncoder passwordEncoder;
 	private final UserRepository userRepository;
 	private final VarificationTokenRepository varificationTokenRepository;
+	private final MailContentBuilder mailContentBuilder;
 	private final MailService mailService;
 	private final AuthenticationManager authenticationManager;
 	private final JwtProvider jwtProvider;
@@ -55,9 +56,14 @@ public class AuthService {
 		
 		String token = generateVarificationToken(user);
 		
-		mailService.sendMail(new NotificationEmail("Please Activate your Account",
-				user.getEmail(),"Thank you for signing up to Spring Reddit"+
-		        "<a href='http://localhost:8080/api/auth/accountVarification/"+token+"'> Activate Acount</a>"));
+		String activationUrl = "http://localhost:8080/api/auth/accountVarification/"+token;
+		
+		String message = mailContentBuilder.build(
+				user.getUsername(), 
+				activationUrl);
+		
+		mailService.sendMail(new NotificationEmail("Please Activet your account", user.getEmail(),message));
+		
 		
 	}
 

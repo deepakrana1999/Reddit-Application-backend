@@ -17,7 +17,7 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public class CommentService {
 
-	private static final String POST_URL = "";
+//	private static final String POST_URL = "http://localhost:4200/api/posts/";
 	private final PostRepository postRepository;
 	private final UserRepository userRepository;
 	private final AuthService authService;

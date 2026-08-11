@@ -104,6 +104,13 @@
         </dependency>
         
         <dependency>
+             <groupId>org.mapstruct</groupId>
+             <artifactId>mapstruct-processor</artifactId>
+             <version>${org.mapstruct.version}</version>
+             <scope>provided</scope>
+        </dependency>
+        
+        <dependency>
             <groupId>com.github.marlonlom</groupId>
             <artifactId>timeago</artifactId>
             <version>4.0.3</version>
@@ -140,6 +147,11 @@
 									<groupId>org.projectlombok</groupId>
 									<artifactId>lombok</artifactId>
 								</path>
+								<path>
+                                    <groupId>org.mapstruct</groupId>
+                                    <artifactId>mapstruct-processor</artifactId>
+                                    <version>${org.mapstruct.version}</version>
+                                    </path>
 							</annotationProcessorPaths>
 						</configuration>
 					</execution>

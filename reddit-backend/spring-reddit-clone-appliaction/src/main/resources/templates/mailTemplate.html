@@ -1,7 +1,35 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
-<head></head>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Activate Account</title>
+</head>
+
 <body>
-<span th:text="${message}"></span>
+
+    <h2>Welcome to Spring Reddit</h2>
+
+    <p>
+        Hello <span th:text="${username}">User</span>,
+    </p>
+
+    <p>
+        Thank you for signing up to Spring Reddit.
+    </p>
+
+    <p>
+        Please click the button below to activate your account.
+    </p>
+
+    <a th:href="${activationUrl}"
+       style="background-color:rgb(128, 255, 0);
+              color:white;
+              padding:10px 20px;
+              text-decoration:none;">
+        Activate Account
+    </a>
+
 </body>
+
 </html>
