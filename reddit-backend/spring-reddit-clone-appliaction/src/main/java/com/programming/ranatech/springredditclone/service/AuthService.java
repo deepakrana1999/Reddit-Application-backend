@@ -58,7 +58,7 @@ public class AuthService {
 		
 		String activationUrl = "http://localhost:8080/api/auth/accountVarification/"+token;
 		
-		String message = mailContentBuilder.build(
+		String message = mailContentBuilder.activationMailBuilder(
 				user.getUsername(), 
 				activationUrl);
 		

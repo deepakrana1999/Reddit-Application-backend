@@ -1,10 +1,7 @@
 package com.programming.ranatech.springredditclone.service;
 
 import java.util.Optional;
-
 import org.springframework.stereotype.Service;
-
-import com.programming.ranatech.springredditclone.dto.PostResponse;
 import com.programming.ranatech.springredditclone.dto.VoteDto;
 import com.programming.ranatech.springredditclone.exceptions.PostNotFoundException;
 import com.programming.ranatech.springredditclone.exceptions.SpringRedditException;
